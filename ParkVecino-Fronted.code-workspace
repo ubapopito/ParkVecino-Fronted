@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "ParkVecino-Fronted",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Semana02"
+	}
+}
