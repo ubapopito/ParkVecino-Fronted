@@ -10,9 +10,10 @@
   "theme_color": "#1A3673",
   "icons": [
     {
-      "src": "/favicon.svg",
+      "src": "/parkvecino-icon.svg",
       "sizes": "any",
-      "type": "image/svg+xml"
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
     }
   ]
 }
