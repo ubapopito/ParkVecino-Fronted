@@ -2629,7 +2629,7 @@ function HostScannerScreen({
 // APLICACIÓN PRINCIPAL
 // ==========================================
 export default function App() {
-  const [screen, setScreen] = useState<string>("map")
+  const [screen, setScreen] = useState<string>("auth")
   const [reservaEstado, setReservaEstado] = useState<
     "ninguna" | "en_ruta" | "finalizada"
   >("ninguna")
