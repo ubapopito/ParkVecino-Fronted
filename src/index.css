@@ -15,8 +15,8 @@ button:focus-visible { outline: 3px solid rgba(16, 185, 129, .35); outline-offse
 body { margin: 0; min-width: 320px; min-height: 100vh; }
 .host-safe-header { height: calc(4rem + max(24px, env(safe-area-inset-top))); padding-top: max(24px, env(safe-area-inset-top)); }
 .host-dashboard-safe-header { padding-top: max(40px, env(safe-area-inset-top)); }
-.app-shell { min-height: 100vh; display: flex; align-items: center; justify-content: center; gap: 76px; padding: 36px; background: radial-gradient(circle at 70% 12%, #fff 0, transparent 32%), #e8edf5; }
-.flow-panel { width: 410px; min-height: 720px; padding: 18px 10px; display: flex; flex-direction: column; }
+.app-shell { width: 100%; min-height: 100vh; min-height: 100dvh; display: flex; align-items: stretch; justify-content: center; padding: 0; background: #f8fafc; }
+.flow-panel { display: none; }
 .logo { display: flex; align-items: center; gap: 10px; color: #1e3a8a; font-size: 18px; font-weight: 800; letter-spacing: -.5px; }
 .logo-mark { width: 34px; height: 34px; display: grid; place-items: center; color: white; border-radius: 10px; background: #1e3a8a; box-shadow: 0 8px 20px rgba(30,58,138,.2); }
 .flow-copy { margin: 94px 0 40px; }
@@ -33,8 +33,8 @@ body { margin: 0; min-width: 320px; min-height: 100vh; }
 .flow-link.active > span { border-color: #1e3a8a; color: white; background: #1e3a8a; }
 .flow-link.active b { color: #1e3a8a; }
 .trust-line { margin-top: auto; display: flex; align-items: center; gap: 8px; color: #059669; font-size: 12px; font-weight: 700; }
-.phone-wrap { position: relative; }
-.phone { position: relative; width: 390px; height: 844px; overflow: hidden; border: 8px solid #14213f; border-radius: 42px; background: #f8fafc; box-shadow: 0 45px 90px rgba(15,23,42,.22), 0 10px 25px rgba(15,23,42,.16); }.screen { position: relative; width: 100%; height: 100%; overflow: hidden; background: #f8fafc; }
+.phone-wrap { position: relative; width: 100%; height: 100vh; height: 100dvh; }
+.phone { position: relative; width: 100%; height: 100vh; height: 100dvh; min-height: 0; overflow: hidden; border: 0; border-radius: 0; background: #f8fafc; box-shadow: none; }.screen { position: relative; width: 100%; height: 100%; overflow: hidden; background: #f8fafc; }
 .status-bar { position: relative; z-index: 20; height: 47px; padding: 15px 22px 0; display: flex; justify-content: space-between; color: #0f172a; font-size: 11px; font-weight: 700; }
 .status-icons { display: flex; align-items: center; gap: 5px; }
 .signal { width: 13px; height: 8px; background: linear-gradient(to right, currentColor 20%, transparent 20% 30%, currentColor 30% 50%, transparent 50% 60%, currentColor 60% 80%, transparent 80% 90%, currentColor 90%); }
@@ -147,8 +147,9 @@ body { margin: 0; min-width: 320px; min-height: 100vh; }
 .scanner-line { animation: scanner-sweep 2.4s ease-in-out infinite; }
 
 @media (max-width: 860px) {
-  .app-shell { padding: 0; background: #14213f; }
+  .app-shell { width: 100%; height: 100vh; height: 100dvh; padding: 0; background: #f8fafc; }
   .flow-panel, .screen-counter { display: none; }
-  .phone { width: min(100vw, 430px); height: 100vh; min-height: 700px; border: 0; border-radius: 0; }
+  .phone-wrap { width: 100%; height: 100vh; height: 100dvh; }
+  .phone { width: 100%; height: 100vh; height: 100dvh; min-height: 0; border: 0; border-radius: 0; }
   .phone::after { display: none; }
 }
